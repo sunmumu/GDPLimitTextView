@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "GDPLimitTextView/GDPLimitTextView.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) GDPLimitTextView              *limitTextView;
 
 @end
 
@@ -16,7 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    [self setupUI];
 }
 
 
@@ -24,6 +28,33 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)viewSafeAreaInsetsDidChange {
+    [super viewSafeAreaInsetsDidChange];
+    [self updateMakeConstraints];
+}
+
+// MARK: - SetupUI
+- (void)setupUI {
+    
+    [self.view addSubview:self.limitTextView];
+}
+
+- (void)updateMakeConstraints {
+    if (@available(iOS 11.0, *)) {
+        UIEdgeInsets Inset = self.view.safeAreaInsets;
+        self.limitTextView.frame = CGRectMake(50, Inset.top + 100, 300, 200);
+    }
+}
+
+// MARK: - Getter -
+- (GDPLimitTextView *)limitTextView {
+    if (!_limitTextView) {
+        _limitTextView = [[GDPLimitTextView alloc] initWithFrame:CGRectMake(50, 100, (300), 200) placeholder:@"请输入公司介绍 (200字以内)" limitNumber:200];
+    }
+    return _limitTextView;
+}
+
 
 
 @end
