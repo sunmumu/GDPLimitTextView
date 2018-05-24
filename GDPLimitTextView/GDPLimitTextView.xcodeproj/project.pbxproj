@@ -14,6 +14,7 @@
 		FEB95CEE20B6B82100A16CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEB95CED20B6B82100A16CD1 /* Assets.xcassets */; };
 		FEB95CF120B6B82100A16CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEB95CEF20B6B82100A16CD1 /* LaunchScreen.storyboard */; };
 		FEB95CF420B6B82100A16CD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB95CF320B6B82100A16CD1 /* main.m */; };
+		FEE75DE220B6BDC3007E2F78 /* GDPLimitTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE75DE120B6BDC3007E2F78 /* GDPLimitTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		FEB95CF020B6B82100A16CD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEB95CF220B6B82100A16CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEB95CF320B6B82100A16CD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FEE75DDF20B6BDC3007E2F78 /* GDPLimitTextviewConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDPLimitTextviewConstant.h; sourceTree = "<group>"; };
+		FEE75DE020B6BDC3007E2F78 /* GDPLimitTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDPLimitTextView.h; sourceTree = "<group>"; };
+		FEE75DE120B6BDC3007E2F78 /* GDPLimitTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDPLimitTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		FEB95CE320B6B82000A16CD1 /* GDPLimitTextView */ = {
 			isa = PBXGroup;
 			children = (
+				FEE75DDE20B6BDC3007E2F78 /* GDPLimitTextView */,
 				FEB95CE420B6B82000A16CD1 /* AppDelegate.h */,
 				FEB95CE520B6B82000A16CD1 /* AppDelegate.m */,
 				FEB95CE720B6B82000A16CD1 /* ViewController.h */,
@@ -91,6 +96,16 @@
 				FEB95CEF20B6B82100A16CD1 /* LaunchScreen.storyboard */,
 				FEB95CF220B6B82100A16CD1 /* Info.plist */,
 				FEB95CF320B6B82100A16CD1 /* main.m */,
+			);
+			path = GDPLimitTextView;
+			sourceTree = "<group>";
+		};
+		FEE75DDE20B6BDC3007E2F78 /* GDPLimitTextView */ = {
+			isa = PBXGroup;
+			children = (
+				FEE75DDF20B6BDC3007E2F78 /* GDPLimitTextviewConstant.h */,
+				FEE75DE020B6BDC3007E2F78 /* GDPLimitTextView.h */,
+				FEE75DE120B6BDC3007E2F78 /* GDPLimitTextView.m */,
 			);
 			path = GDPLimitTextView;
 			sourceTree = "<group>";
@@ -190,6 +205,7 @@
 				FEB95CE920B6B82000A16CD1 /* ViewController.m in Sources */,
 				FEB95CF420B6B82100A16CD1 /* main.m in Sources */,
 				FEB95CE620B6B82000A16CD1 /* AppDelegate.m in Sources */,
+				FEE75DE220B6BDC3007E2F78 /* GDPLimitTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
