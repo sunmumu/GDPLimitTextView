@@ -1,1 +1,18 @@
 # GDPLimitTextView
+
+TextView有占位符合字数限制和提示
+
+## Use
+1. 下载GDPLimitTextView框架,把GDPLimitTextView文件夹拷贝到项目中. 
+2. 在控制器中#import "GDPLimitTextView.h".
+3. 本框架依赖Masonry库做约束, 你的项目需要集成Masonry框架.
+
+## 创建方法
+```
+- (instancetype)initWithFrame:(CGRect)frame placeholder:(NSString *)placeholder limitNumber:(NSInteger)limitNumber;
+```
+
+## License
+
+GDPHeadView is released under a MIT License. See LICENSE file for details.
+
