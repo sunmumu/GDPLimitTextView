@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99C189C485232CB1E2254E73 /* libPods-GDPLimitTextView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0CFEE812FB0658AC7BEAB /* libPods-GDPLimitTextView.a */; };
 		FEB95CE620B6B82000A16CD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB95CE520B6B82000A16CD1 /* AppDelegate.m */; };
 		FEB95CE920B6B82000A16CD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB95CE820B6B82000A16CD1 /* ViewController.m */; };
 		FEB95CEC20B6B82000A16CD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEB95CEA20B6B82000A16CD1 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94FFA7BA1520091753B549D7 /* Pods-GDPLimitTextView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDPLimitTextView.release.xcconfig"; path = "Pods/Target Support Files/Pods-GDPLimitTextView/Pods-GDPLimitTextView.release.xcconfig"; sourceTree = "<group>"; };
+		CDD0CFEE812FB0658AC7BEAB /* libPods-GDPLimitTextView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GDPLimitTextView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8C31DBBDC65FF1642A31600 /* Pods-GDPLimitTextView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDPLimitTextView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDPLimitTextView/Pods-GDPLimitTextView.debug.xcconfig"; sourceTree = "<group>"; };
 		FEB95CE120B6B82000A16CD1 /* GDPLimitTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDPLimitTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB95CE420B6B82000A16CD1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FEB95CE520B6B82000A16CD1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99C189C485232CB1E2254E73 /* libPods-GDPLimitTextView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181588A5039366978E85ECF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8C31DBBDC65FF1642A31600 /* Pods-GDPLimitTextView.debug.xcconfig */,
+				94FFA7BA1520091753B549D7 /* Pods-GDPLimitTextView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC734F5B15451E43D7A1F2FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDD0CFEE812FB0658AC7BEAB /* libPods-GDPLimitTextView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FEB95CD820B6B82000A16CD1 = {
 			isa = PBXGroup;
 			children = (
 				FEB95CE320B6B82000A16CD1 /* GDPLimitTextView */,
 				FEB95CE220B6B82000A16CD1 /* Products */,
+				181588A5039366978E85ECF1 /* Pods */,
+				EC734F5B15451E43D7A1F2FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEB95CF720B6B82100A16CD1 /* Build configuration list for PBXNativeTarget "GDPLimitTextView" */;
 			buildPhases = (
+				EF7637C608ACF9288D0633AD /* [CP] Check Pods Manifest.lock */,
 				FEB95CDD20B6B82000A16CD1 /* Sources */,
 				FEB95CDE20B6B82000A16CD1 /* Frameworks */,
 				FEB95CDF20B6B82000A16CD1 /* Resources */,
@@ -135,6 +160,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EF7637C608ACF9288D0633AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GDPLimitTextView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FEB95CDD20B6B82000A16CD1 /* Sources */ = {
@@ -281,6 +327,7 @@
 		};
 		FEB95CF820B6B82100A16CD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C31DBBDC65FF1642A31600 /* Pods-GDPLimitTextView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +345,7 @@
 		};
 		FEB95CF920B6B82100A16CD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94FFA7BA1520091753B549D7 /* Pods-GDPLimitTextView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
