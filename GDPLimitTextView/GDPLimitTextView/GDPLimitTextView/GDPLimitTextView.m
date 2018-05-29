@@ -25,6 +25,15 @@
     return self;
 }
 
++ (instancetype)_alloc {
+    return [super allocWithZone:NSDefaultMallocZone()];
+}
+
+- (instancetype)init {
+    NSCAssert(NO, @"请使用`- (instancetype)initWithFrame:(CGRect)frame placeholder:(NSString *)placeholder limitNumber:(NSInteger)limitNumber`方法创建对象");
+    return nil;
+}
+
 // MARK: - SetupUI
 - (void)setupSubViews {
     self.backgroundColor = THEME_CONTANTCOLOR;
