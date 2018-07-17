@@ -11,7 +11,8 @@ TextView有占位符合字数限制和提示
 
 ## 创建方法
 ```
-- (instancetype)initWithFrame:(CGRect)frame placeholder:(NSString *)placeholder limitNumber:(NSInteger)limitNumber;
+- (instancetype)initWithFrame:(CGRect)frame placeholder:(NSString *)placeholder limitNumber:(NSInteger)limitNumber textBlock:(StringBlock)textBlock;
+
 ```
 
 ## License

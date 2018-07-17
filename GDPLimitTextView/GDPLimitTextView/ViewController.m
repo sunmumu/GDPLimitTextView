@@ -49,7 +49,7 @@
 - (GDPLimitTextView *)limitTextView {
     if (!_limitTextView) {
         _limitTextView = [[GDPLimitTextView alloc] initWithFrame:CGRectMake(50, 100, 300, 200) placeholder:@"请输入公司介绍 (200字以内)" limitNumber:200 textBlock:^(NSString *result) {
-            
+            NSLog(@"文字是%@",result);
         }];
     }
     return _limitTextView;

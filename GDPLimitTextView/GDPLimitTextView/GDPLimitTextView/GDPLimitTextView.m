@@ -17,15 +17,6 @@
 
 @implementation GDPLimitTextView
 
-- (instancetype)initWithFrame:(CGRect)frame placeholder:(NSString *)placeholder limitNumber:(NSInteger)limitNumber {
-    if (self = [super initWithFrame:frame]) {
-        self.placeholder = placeholder;
-        self.limitNumber = limitNumber;
-        [self setupSubViews];
-    }
-    return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame placeholder:(NSString *)placeholder limitNumber:(NSInteger)limitNumber textBlock:(StringBlock)textBlock {
     if (self = [super initWithFrame:frame]) {
         self.placeholder = placeholder;
