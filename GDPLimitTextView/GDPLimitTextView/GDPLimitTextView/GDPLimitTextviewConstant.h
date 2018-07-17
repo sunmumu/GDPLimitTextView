@@ -35,4 +35,6 @@
 #define THEME_TWENTYMARGIN                      20.0f
 #define THEME_FIVEMARGIN                        5.0f
 
+typedef void (^StringBlock)(NSString *result);
+
 #endif /* GDPLimitTextviewConstant_h */

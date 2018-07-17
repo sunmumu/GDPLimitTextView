@@ -11,6 +11,7 @@
 
 @property (nonatomic, copy) NSString                            *placeholder;
 @property (nonatomic, assign) NSInteger                         limitNumber;
+@property (nonatomic, copy) StringBlock                         textBlock;
 
 @end
 
@@ -20,6 +21,16 @@
     if (self = [super initWithFrame:frame]) {
         self.placeholder = placeholder;
         self.limitNumber = limitNumber;
+        [self setupSubViews];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame placeholder:(NSString *)placeholder limitNumber:(NSInteger)limitNumber textBlock:(StringBlock)textBlock {
+    if (self = [super initWithFrame:frame]) {
+        self.placeholder = placeholder;
+        self.limitNumber = limitNumber;
+        self.textBlock = textBlock;
         [self setupSubViews];
     }
     return self;
@@ -97,6 +108,9 @@
 - (void)textViewDidChange:(UITextView *)textView {
     NSString *string = [NSString stringWithFormat:@"%ld/%ld",textView.text.length,self.limitNumber];
     self.numberTipLabel.text = string;
+    if (self.textBlock) {
+        self.textBlock(textView.text);
+    }
 }
 
 // MARK: - Getter -
