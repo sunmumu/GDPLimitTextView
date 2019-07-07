@@ -104,6 +104,12 @@
     }
 }
 
+// MARK: - Setter -
+- (void)setHiddenNumberTip:(BOOL)hiddenNumberTip {
+    _hiddenNumberTip = hiddenNumberTip;
+    self.numberTipLabel.hidden = hiddenNumberTip;
+}
+
 // MARK: - Getter -
 - (UITextView *)textView {
     if (!_textView) {
