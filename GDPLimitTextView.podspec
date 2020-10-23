@@ -18,7 +18,6 @@ Pod::Spec.new do |s|
   s.libraries = 'z'
   s.frameworks = 'UIKit'
   s.dependency 'Masonry'
-  # s.ios.vendored_frameworks = 'Vendor/WebP.framework'
   
 
 end
