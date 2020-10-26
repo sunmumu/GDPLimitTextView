@@ -4,6 +4,10 @@ TextView有占位符合字数限制和提示
 
 > 注意: 本demo集成了masonry第三方框架, 下载本框架后,先执行下pod install命令. 才可以运行demo看效果
 
+## 效果
+
+![TextView有占位符合字数限制和提示](https://github.com/sunmumu/GDPLimitTextView/blob/master/Demo/%E6%95%88%E6%9E%9C.GIF?raw=true)
+
 ## Use
 法一 cocopods引用
 pod 'GDPLimitTextView'
