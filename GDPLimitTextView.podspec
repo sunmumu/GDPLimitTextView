@@ -3,7 +3,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'GDPLimitTextView'
-  s.version      = '1.0.3'
+  s.version      = '1.0.4'
   s.summary      = 'TextView有占位符合字数限制和提示'
   s.homepage     = 'https://github.com/sunmumu/GDPLimitTextView'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
